@@ -1,0 +1,38 @@
+public class Main {
+
+    public static void main(String[] args) {
+
+        Empresa empresa = new Empresa("Tech Solutions");
+
+        // Adicionando funcionários
+        empresa.adicionarFuncionario(
+                "Carlos",
+                "Programador",
+                3500
+        );
+
+        empresa.adicionarFuncionario(
+                "Ana",
+                "Designer",
+                2800
+        );
+
+        // Adicionando clientes
+        empresa.adicionarCliente(
+                "João",
+                "joao@gmail.com"
+        );
+
+        empresa.adicionarCliente(
+                "Maria",
+                "maria@gmail.com"
+        );
+
+        // Exibindo dados
+        empresa.exibirFuncionarios();
+
+        empresa.exibirClientes();
+
+        empresa.calcularFolhaSalarial();
+    }
+}
