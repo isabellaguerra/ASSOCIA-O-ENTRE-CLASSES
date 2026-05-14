@@ -1,0 +1,94 @@
+public class Empresa {
+
+    String nome;
+
+    Funcionario[] funcionarios = new Funcionario[5];
+    Cliente[] clientes = new Cliente[10];
+
+   
+    int qtdFuncionarios = 0;
+    int qtdClientes = 0;
+
+    public Empresa(String nome) {
+        this.nome = nome;
+    }
+
+    public void adicionarFuncionario(String nome, String cargo, double salario) {
+
+
+if[ qtdFuncionarios]=
+ new Funcionario(nome, cargo, salario);
+
+            qtdFuncionarios++;
+
+            System.out.println("Funcionário adicionado!");
+        } else {
+            System.out.println("Limite de funcionários atingido!");
+        }
+    }
+
+    // Método exibir funcionários
+    public void exibirFuncionarios() {
+
+        System.out.println("\nFuncionários da empresa:");
+
+        for (int i = 0; i < qtdFuncionarios; i++) {
+
+            System.out.println("Nome: " + funcionarios[i].nome);
+            System.out.println("Cargo: " + funcionarios[i].cargo);
+            System.out.println("Salário: R$ " + funcionarios[i].salario);
+            System.out.println("---------------------");
+        }
+    }
+
+    // Método adicionar cliente
+    public void adicionarCliente(String nome, String email) {
+
+        if (qtdClientes < clientes.length) {
+
+            clientes[qtdClientes] =
+                    new Cliente(nome, email);
+
+            qtdClientes++;
+
+            System.out.println("Cliente adicionado!");
+        } else {
+            System.out.println("Limite de clientes atingido!");
+        }
+    }
+
+    // Método exibir clientes
+    public void exibirClientes() {
+
+        System.out.println("\nClientes da empresa:");
+
+        for (int i = 0; i < qtdClientes; i++) {
+
+            System.out.println("Nome: " + clientes[i].nome);
+            System.out.println("Email: " + clientes[i].email);
+            System.out.println("---------------------");
+        }
+    }
+
+    // Método calcular folha salarial
+    public void calcularFolhaSalarial() {
+
+        double total = 0;
+
+        for (int i = 0; i < qtdFuncionarios; i++) {
+            total += funcionarios[i].salario;
+        }
+
+        System.out.println("\nFolha salarial total: R$ " + total);
+    }
+}
+
+
+
+
+
+
+
+
+
+
